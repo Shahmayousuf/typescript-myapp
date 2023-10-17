@@ -1,9 +1,17 @@
 import React from 'react'
+type greetProps={
+  name:string
+  count:number
+  loggedIn:boolean
+}
 
-const Greet = () => {
+const Greet = (props:greetProps) => {
   return (
     <div>
-      <h2>hello world</h2>
+      <h2>
+        {props.loggedIn? `welcome ${props.name}!You have ${props.count} unread messages`:
+        'welcome'
+}</h2>
     </div>
   )
 }
